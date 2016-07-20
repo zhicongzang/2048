@@ -20,7 +20,7 @@
 		DC6ED8B81D3EB03E00AEFECB /* AccessoryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6ED8B71D3EB03E00AEFECB /* AccessoryViews.swift */; };
 		DC6ED8FE1D3EB77B00AEFECB /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6ED8FD1D3EB77B00AEFECB /* GameModel.swift */; };
 		DC6ED9001D3EBB9E00AEFECB /* AuxiliaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6ED8FF1D3EBB9E00AEFECB /* AuxiliaryModels.swift */; };
-		DC6ED9021D3EC1AE00AEFECB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6ED9011D3EC1AE00AEFECB /* GameViewController.swift */; };
+		DC6ED9021D3EC1AE00AEFECB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6ED9011D3EC1AE00AEFECB /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		DC6ED8B71D3EB03E00AEFECB /* AccessoryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryViews.swift; sourceTree = "<group>"; };
 		DC6ED8FD1D3EB77B00AEFECB /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		DC6ED8FF1D3EBB9E00AEFECB /* AuxiliaryModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryModels.swift; sourceTree = "<group>"; };
-		DC6ED9011D3EC1AE00AEFECB /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		DC6ED9011D3EC1AE00AEFECB /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 			children = (
 				DC6ED8811D3E982E00AEFECB /* AppDelegate.swift */,
 				DC6ED8831D3E982E00AEFECB /* ViewController.swift */,
+				DC6ED9011D3EC1AE00AEFECB /* GameController.swift */,
 				DC6ED8AF1D3E994F00AEFECB /* AppearanceProvider.swift */,
-				DC6ED9011D3EC1AE00AEFECB /* GameViewController.swift */,
 				DC6ED8B21D3E9C1900AEFECB /* model */,
 				DC6ED8B11D3E9C0700AEFECB /* view */,
 				DC6ED8851D3E982E00AEFECB /* Main.storyboard */,
@@ -300,7 +300,7 @@
 				DC6ED8B81D3EB03E00AEFECB /* AccessoryViews.swift in Sources */,
 				DC6ED8821D3E982E00AEFECB /* AppDelegate.swift in Sources */,
 				DC6ED8B61D3E9EBD00AEFECB /* GameboardView.swift in Sources */,
-				DC6ED9021D3EC1AE00AEFECB /* GameViewController.swift in Sources */,
+				DC6ED9021D3EC1AE00AEFECB /* GameController.swift in Sources */,
 				DC6ED9001D3EBB9E00AEFECB /* AuxiliaryModels.swift in Sources */,
 				DC6ED8B41D3E9C2C00AEFECB /* TileView.swift in Sources */,
 				DC6ED8FE1D3EB77B00AEFECB /* GameModel.swift in Sources */,
@@ -529,6 +529,7 @@
 				DC6ED8A81D3E982E00AEFECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC6ED8A91D3E982E00AEFECB /* Build configuration list for PBXNativeTarget "2048Tests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +538,7 @@
 				DC6ED8AB1D3E982E00AEFECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC6ED8AC1D3E982E00AEFECB /* Build configuration list for PBXNativeTarget "2048UITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +547,7 @@
 				DC6ED8AE1D3E982E00AEFECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

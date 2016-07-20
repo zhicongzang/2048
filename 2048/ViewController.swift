@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let game = GameController(frame: self.view.frame, dimension: 4, threshold: 32)
+        self.view.addSubview(game)
     }
     
 
@@ -21,10 +23,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func StartGame(sender: AnyObject) {
-        let game = GameViewController(dimension: 4, threshold: 1000000)
-        self.presentViewController(game, animated: true, completion: nil)
-    }
+}
 
+extension UIView {
+    var parentViewController: UIViewController? {
+        var parentResponder: UIResponder? = self
+        while parentResponder != nil {
+            parentResponder = parentResponder!.nextResponder()
+            if let viewController = parentResponder as? UIViewController {
+                return viewController
+            }
+        }
+        return nil
+    }
 }
 

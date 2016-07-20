@@ -14,12 +14,26 @@ class GameModel {
     
     var score = 0 {
         didSet {
-            
+            controller.scoreChanged(score)
+            if score > record {
+                record = score
+            }
+        }
+    }
+    
+    var record: Int = {
+        if let r = NSUserDefaults.standardUserDefaults().objectForKey("Record") as? Int {
+            return r
+        }
+        return 0
+    }() {
+        didSet {
+            controller.setRecord(record)
         }
     }
     
     var gameboard: SquareGameboard<TileObject>
-    unowned var controller: GameViewController
+    unowned var controller: GameController
     
     var queue: [MoveCommand]
     var timer: NSTimer
@@ -69,7 +83,9 @@ class GameModel {
         return (false, nil)
     }
     
-    init(dimension: Int, threshold: Int, controller: GameViewController) {
+    var continueGame = false
+    
+    init(dimension: Int, threshold: Int, controller: GameController) {
         self.dimension = dimension
         self.threshold = threshold
         self.controller = controller
@@ -80,6 +96,7 @@ class GameModel {
     
     func reset() {
         score = 0
+        continueGame = false
         gameboard.setAll(.Empty)
         queue.removeAll()
         timer.invalidate()
